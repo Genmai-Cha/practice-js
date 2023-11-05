@@ -1,0 +1,44 @@
+p {
+    margin: 0;
+}
+
+/* アコーディオン */
+.accordion-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #007dc6;
+    color: white;
+}
+
+.triangle {
+    width: 20px;
+    height: calc(tan(60deg) * 20px / 2);
+    background-color: #ffee00;
+}
+
+.triangle-close {
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.triangle-open {
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.accordion-answer {
+    position: absolute;
+    clip-path: circle(1px);
+}
+
+.accordion-answer-display {
+    position: relative;
+    clip-path: none;
+    padding: 10px;
+    background-color: #dfe6ea;
+}
+
+div.question-box:not(:last-child) {
+    margin-bottom: 10px;
+}
