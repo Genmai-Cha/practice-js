@@ -2,6 +2,12 @@ p {
     margin: 0;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 /* アコーディオン */
 .accordion-question {
     display: flex;
@@ -41,4 +47,38 @@ p {
 
 div.question-box:not(:last-child) {
     margin-bottom: 10px;
+}
+
+/* タブメニュー */
+ul.tab-menu {
+    display: flex;
+    width: 100%;
+}
+
+.tab-menu li {
+    width: 100px;
+    border-radius: 10px 10px 0 0;
+    background-color: #FFF2BF;
+    color: #BFC5CA;
+    padding: 10px;
+}
+
+.tab-menu li.is-active {
+    background-color: #fcc800;
+    font-weight: bold;
+    color: #333333;
+    border-bottom: none;
+}
+
+
+div.is-tab-active {
+    position: relative;
+    clip-path: none;
+}
+
+.tab-content {
+    position: absolute;
+    clip-path: inset(1100px);
+    border: 2px solid #333333;
+    padding: 10px;
 }
